@@ -9,18 +9,18 @@ public class MyViewModel extends ViewModel {
     // Aquí declararamos las variables y métodos que serán observados por la vista.
     private MutableLiveData<MyDataModel> myData = new MutableLiveData<>();
 
-    public LiveData<MyDataModel> getMyData() {
-        return myData;
-    }
-
-    public void setMyData(MyDataModel newData) {
-        myData.setValue(newData);
-    }
-
     // Método para simular la actualización de datos en este ejemplo
     public void updateMyData(String name, int age) {
         MyDataModel updatedData = new MyDataModel(name, age);
         setMyData(updatedData);
+    }
+
+    public LiveData<MyDataModel> getMyData(){
+        return myData;
+    }
+
+    public void setMyData(MyDataModel newData){
+        myData.setValue(newData);
     }
 }
 
