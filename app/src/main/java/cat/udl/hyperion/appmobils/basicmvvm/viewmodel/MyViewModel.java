@@ -20,7 +20,6 @@ public class MyViewModel extends ViewModel {
         MyDataModel updatedData = new MyDataModel(name, age);
         setMyData(updatedData);
     }
-
     public LiveData<MyDataModel> getMyData(){
         return myData;
     }
@@ -29,32 +28,3 @@ public class MyViewModel extends ViewModel {
         myData.setValue(newData);
     }
 }
-
-/*import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.ViewModel;
-
-public class MyViewModel extends ViewModel {
-    private MutableLiveData<MyDataModel> myData;
-
-    public MyViewModel() {
-        // Inicializar los datos de MyDataModel con valores predeterminados
-        MyDataModel initialData = new MyDataModel("Nombre Ejemplo", 25);
-        myData = new MutableLiveData<>(initialData);
-    }
-
-    public LiveData<MyDataModel> getMyData() {
-        return myData;
-    }
-
-    public void setMyData(MyDataModel newData) {
-        myData.setValue(newData);
-    }
-
-    // Método para simular la actualización de datos
-    public void updateMyData(String name, int age) {
-        MyDataModel updatedData = new MyDataModel(name, age);
-        setMyData(updatedData);
-    }
-}
-*/
