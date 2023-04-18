@@ -40,34 +40,3 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
-/*import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
-import android.widget.TextView;
-
-public class MainActivity extends AppCompatActivity {
-    private MyViewModel myViewModel;
-    private TextView myTextView;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        myTextView = findViewById(R.id.myTextView);
-
-        // Inicializa el ViewModel
-        myViewModel = new ViewModelProvider(this).get(MyViewModel.class);
-
-        // Observa los cambios en el ViewModel
-        myViewModel.getMyData().observe(this, new Observer<MyDataModel>() {
-            @Override
-            public void onChanged(MyDataModel myDataModel) {
-                if (myDataModel != null) {
-                    myTextView.setText(myDataModel.getName() + ", " + myDataModel.getAge());
-                }
-            }
-        });
-    }
-}
-*/
