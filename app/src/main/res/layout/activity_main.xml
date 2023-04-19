@@ -53,6 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:src="@drawable/baseline_send_24"
+            android:onClick="@{() -> viewModel.updateMyData(txtName.getText().toString(), viewModel.myData.age)}"
             app:layout_constraintStart_toEndOf="@+id/txtName"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -61,6 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/baseline_send_24"
+            android:onClick="@{() -> viewModel.updateMyData(viewModel.myData.name, Integer.parseInt(txtAge.getText().toString()))}"
             app:layout_constraintStart_toEndOf="@+id/txtAge"
             app:layout_constraintTop_toBottomOf="@+id/sendName" />
 
